@@ -2,65 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/blue/</loc>
+    <loc>https://crucible.lbl.gov/tags/blue/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/green/</loc>
+    <loc>https://crucible.lbl.gov/tags/green/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/post-3/</loc>
+    <loc>https://crucible.lbl.gov/posts/post-3/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/red/</loc>
+    <loc>https://crucible.lbl.gov/tags/red/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://crucible.lbl.gov/tags/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/post-2/</loc>
+    <loc>https://crucible.lbl.gov/posts/post-2/</loc>
     <lastmod>2023-02-15T10:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hip_microscope/</loc>
+    <loc>https://crucible.lbl.gov/tags/hip_microscope/</loc>
     <lastmod>2023-01-15T09:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hyperspectral/</loc>
+    <loc>https://crucible.lbl.gov/tags/hyperspectral/</loc>
     <lastmod>2023-01-15T09:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/analysis/hyperspec/</loc>
+    <loc>https://crucible.lbl.gov/analysis/hyperspec/</loc>
     <lastmod>2023-01-15T09:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/post-1/</loc>
+    <loc>https://crucible.lbl.gov/posts/post-1/</loc>
     <lastmod>2023-01-15T09:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/analysis/</loc>
+    <loc>https://crucible.lbl.gov/analysis/</loc>
     <lastmod>2023-01-01T08:30:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://crucible.lbl.gov/posts/</loc>
     <lastmod>2023-01-01T08:30:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://crucible.lbl.gov/</loc>
     <lastmod>2023-01-01T08:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/analysis/post1/</loc>
+    <loc>https://crucible.lbl.gov/analysis/post1/</loc>
   </url><url>
-    <loc>http://localhost:1313/instruments/</loc>
+    <loc>https://crucible.lbl.gov/instruments/</loc>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://crucible.lbl.gov/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/instruments/bioglow/</loc>
+    <loc>https://crucible.lbl.gov/instruments/bioglow/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://crucible.lbl.gov/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/demos/</loc>
+    <loc>https://crucible.lbl.gov/demos/</loc>
   </url><url>
-    <loc>http://localhost:1313/instruments/hip_microscope/</loc>
+    <loc>https://crucible.lbl.gov/instruments/hip_microscope/</loc>
   </url><url>
-    <loc>http://localhost:1313/hpc/</loc>
+    <loc>https://crucible.lbl.gov/hpc/</loc>
   </url><url>
-    <loc>http://localhost:1313/instruments/spin-bot/</loc>
+    <loc>https://crucible.lbl.gov/instruments/spin-bot/</loc>
   </url><url>
-    <loc>http://localhost:1313/instruments/supra-cl/</loc>
+    <loc>https://crucible.lbl.gov/instruments/supra-cl/</loc>
   </url><url>
-    <loc>http://localhost:1313/instruments/titanx/</loc>
+    <loc>https://crucible.lbl.gov/instruments/titanx/</loc>
   </url>
 </urlset>

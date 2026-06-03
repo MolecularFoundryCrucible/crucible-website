@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SpinBot on Crucible Data Platform</title>
-    <link>http://localhost:1313/instruments/spin-bot/</link>
+    <link>https://crucible.lbl.gov/instruments/spin-bot/</link>
     <description>Recent content in SpinBot on Crucible Data Platform</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/instruments/spin-bot/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://crucible.lbl.gov/instruments/spin-bot/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
