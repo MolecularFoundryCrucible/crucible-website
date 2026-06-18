@@ -1,7 +1,117 @@
-<!doctype html><html lang=en-us dir=ltr data-bs-theme=light><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>BioGlow | Crucible Data Platform</title><link rel=icon type=image/png sizes=256x256 href=/assets/img/logo-256-white.png><link rel=stylesheet href=/assets/bootstrap/css/bootstrap.min.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap"><link rel=stylesheet href=/assets/css/baguetteBox.min.css><link rel=stylesheet href=/assets/css/Banner-Heading-Image-images.css><link rel=stylesheet href=/assets/css/Features-Large-Icons-icons.css><link rel=stylesheet href=/assets/css/vanilla-zoom.min.css><link rel=stylesheet href=/assets/css/main.css><script src=/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js integrity="sha256-I80MfYNyY7nq65buLZzPopadqj+gD6HB/ocBqbhyUaE=" crossorigin=anonymous></script></head><body><header><h1>Crucible Data Platform</h1></header><nav class="navbar navbar-expand-lg fixed-top bg-white clean-navbar navbar-light"><div class=container><a class="navbar-brand text-nowrap logo" href=#><img width=64 height=64 src=/assets/img/logo-256-white.png style=width:64px>Crucible Data Platform</a><button data-bs-toggle=collapse class=navbar-toggler data-bs-target=#navcol-1><span class=visually-hidden>Toggle navigation</span><span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse" id=navcol-1><ul class="navbar-nav ms-auto"><li class=nav-item><a class=nav-link href=/>Home</a></li><li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded=false data-bs-toggle=dropdown href=#>Get Started</a><div class=dropdown-menu><a class=dropdown-item href=https://pypi.org/project/nano-crucible/>Install the Client</a>
-<a class=dropdown-item href=https://crucible-graph-explorer-776258882599.us-central1.run.app/>Explore Your Data</a>
-<a class=dropdown-item href=https://github.com/MolecularFoundryCrucible/nano-crucible>Contribute to the Project</a>
-<a class=dropdown-item href=https://foundry.lbl.gov/user-program/applying-for-access/>Submit a User Proposal</a>
-<a class=dropdown-item href=/demos/>Demos</a></div></li><li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded=false data-bs-toggle=dropdown href=#>Software</a><div class=dropdown-menu><a class=dropdown-item href=https://github.com/MolecularFoundryCrucible/nano-crucible>Crucible</a>
-<a class=dropdown-item href=http://www.scopefoundry.org>ScopeFoundry</a></div></li><li class=nav-item><a class=nav-link href=/about>About</a></li></ul></div></div></nav><main class=page><h1>BioGlow</h1><section class="clean-block clean-blog-list dark"><div class=container><div class=block-heading><h2 class=text-info>Instruments</h2><p>Scientific Instruments at the Molecular Foundry connected to Crucible</p></div><div class=block-content><h1 id=bioglow>BioGlow</h1><p><em>Capturing biological Ultra-Weak Photon Emission</em></p><p><strong>Foundry Scientist:</strong> Aeron T Hammack</p><p><strong>Super User:</strong> Rhys Mould</p><h2 id=science>Science</h2><p>All cells spontaneously release extremely low levels of light, a phenomenon known as Ultra-Weak Photon Emission (UPE). These photons are byproducts of excited Reactive Oxygen Species (ROS), themselves byproducts of cellular metabolism. As such, the intensity of emission is tied to the cell’s metabolic state, meaning UPE could facilitate previously unknown light-based signalling pathways. However, study of UPE is made challenging because of the low intensities: 1&ndash;1000 photons per second per cm<sup>2</sup>.</p><h2 id=hardware>Hardware</h2><p>The BioGlow system, pictured, is designed to capture and study the UPE phenomena in detail. Contained with a dark box to prevent exogenous light interference (left image), the BioGlow is a programmable, automated system consisting of two Peltier-cooled low dark count PMTs (right image) to measure both total photon output and spectrally resolved emission. An automated stage allows multiple samples to be analysed in a single experiment. A MultiHarp time correlated single photon counter also provides time tagging photon arrival, enabling users to investigate potential photon bunching, which may imply quantum phenomena occurring within a biological system. Wavelength filtering with Bandpass filters on PMT A allow for spectrally-resolved measurements of UPE.</p><p><img src=image.png alt="alt text"> <img src=image-1.png alt="alt text"></p><h2 id=software>Software</h2><h3 id=computer>Computer</h3><p>bioglow.dhcp.lbl.gov running NixOS Linux with Dockerized KasmVNC container with python, ScopeFoundry and VSCode.</p><p>Access via Docker Container KasmVNC at <a href=https://bioglow.dhcp.lbl.gov:3001>https://bioglow.dhcp.lbl.gov:3001</a></p><p>BioGlow software is a <a href=http://www.scopefoundry.org>ScopeFoundry</a> instrument</p><p><img src=bioglow_screenshot.png alt="BioGlow ScopeFoundry Screenshot"></p><p>Git Repo on BitBucket: <a href=https://bitbucket.org/berkeleylab/foundry_scope/src/bioglow/>https://bitbucket.org/berkeleylab/foundry_scope/src/bioglow/</a></p><p>Cloning software:</p><pre><code>`git clone -b bioglow https://bitbucket.org/berkeleylab/foundry_scope.git`
-</code></pre><h2 id=experiment-types>Experiment Types</h2><h3 id=multiharp-channel-optimizer>MultiHarp Channel Optimizer</h3><p><code>multiharp_channel_optimizer</code></p><p>ScopeFoundry measurement to visualize count rates</p><p><img src=image-2.png alt="alt text"></p><h3 id=multiharp-t2>MultiHarp T2</h3><h3 id=bioglow-spectral-collection>BioGlow Spectral Collection</h3><p><code>bioglow_spec</code></p><p>Loops through up to 4 sample positions, 11 spectral windows and collects photons on both PMTs for a set amount of time for each sample and spectral &ldquo;block&rdquo;. Output file is an HDF5 file that stores both time-stamped count rates as well as raw MultiHarp T2 style photon event records for each block. Each block is addtionally saved as its own HDF5 file for backup.</p><p><img src=image-3.png alt="alt text"></p><h2 id=processing-and-analysis>Processing and Analysis</h2><h3 id=bioglow-spectral-datasets-in-crucible>BioGlow Spectral datasets in Crucible</h3><p><code>bioglow_spec</code> datasets are automatically ingested into <a href=https://crucible.lbl.gov>Crucible</a> and can be viewed on <a href=https://mf-scicat.lbl.gov>SciCat</a> or accessed via Google Drive.</p><p><img src=scicat-screenshot.png alt="alt text"></p><h3 id=automated-crucible-event-record-parsing>Automated Crucible event record parsing</h3><p>Coming Soon!</p><h3 id=jupyter-notebooks-for-count-rate-analysis>Jupyter Notebooks for Count rate analysis</h3><p>Coming Soon!</p></main><footer><p>Copyright 2026. All rights reserved.</p><p><a class="text-muted small" href=https://crucible.lbl.gov/api/v1/docs>API Documentation</a></p></footer><script src=/assets/bootstrap/js/bootstrap.min.js></script><script src=/assets/js/baguetteBox.min.js></script><script src=/assets/js/vanilla-zoom.js></script><script src=/assets/js/theme.js></script></body></html>
+<!DOCTYPE html>
+<html 
+lang="en-us" 
+dir="ltr"
+data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title>BioGlow | Crucible Data Platform</title>
+<link rel="icon" type="image/png" sizes="256x256" href="/assets/img/logo-256-white.png">
+
+<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/baguetteBox.min.css">
+<link rel="stylesheet" href="/assets/css/Banner-Heading-Image-images.css">
+<link rel="stylesheet" href="/assets/css/Features-Large-Icons-icons.css">
+<link rel="stylesheet" href="/assets/css/vanilla-zoom.min.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+  <header>
+    <h1>Crucible Data Platform</h1>
+
+
+  </header>
+  <nav class="navbar navbar-expand-lg fixed-top bg-white clean-navbar navbar-light">
+    <div class="container"><a class="navbar-brand text-nowrap logo" href="#"><img width="64" height="64" src="/assets/img/logo-256-white.png" style="width: 64px;">Crucible Data Platform</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navcol-1">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">Get Started</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="https://pypi.org/project/nano-crucible/">Install the Client</a>
+              <a class="dropdown-item" href="https://crucible.lbl.gov/explore/">Explore Your Data</a>
+              <a class="dropdown-item" href="https://github.com/MolecularFoundryCrucible/nano-crucible">Contribute to the Project</a>
+              <a class="dropdown-item" href="https://foundry.lbl.gov/user-program/applying-for-access/">Submit a User Proposal</a>
+              <a class="dropdown-item" href="/demos/">Demos</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">Software</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="https://github.com/MolecularFoundryCrucible/nano-crucible">Crucible</a>
+              <a class="dropdown-item" href="http://www.scopefoundry.org">ScopeFoundry</a></div>
+            </li>
+            
+            <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>  
+  <main class="page">
+    
+  <h1>BioGlow</h1>
+  <section class="clean-block clean-blog-list dark">
+    <div class="container">
+        <div class="block-heading">
+            <h2 class="text-info">Instruments</h2>
+            <p>Scientific Instruments at the Molecular Foundry connected to Crucible</p>
+        </div>
+        <div class="block-content">
+
+  <h1 id="bioglow">BioGlow</h1>
+<p><em>Capturing biological Ultra-Weak Photon Emission</em></p>
+<p><strong>Foundry Scientist:</strong> Aeron T Hammack</p>
+<p><strong>Super User:</strong> Rhys Mould</p>
+<h2 id="science">Science</h2>
+<p>All cells spontaneously release extremely low levels of light, a phenomenon known as Ultra-Weak Photon Emission (UPE). These photons are byproducts of excited Reactive Oxygen Species (ROS), themselves byproducts of cellular metabolism. As such, the intensity of emission is tied to the cell’s metabolic state, meaning UPE could facilitate previously unknown light-based signalling pathways. However, study of UPE is made challenging because of the low intensities: 1&ndash;1000 photons per second per cm<sup>2</sup>.</p>
+<h2 id="hardware">Hardware</h2>
+<p>The BioGlow system, pictured, is designed to capture and study the UPE phenomena in detail. Contained with a dark box to prevent exogenous light interference (left image), the BioGlow is a programmable, automated system consisting of two Peltier-cooled low dark count PMTs (right image) to measure both total photon output and spectrally resolved emission. An automated stage allows multiple samples to be analysed in a single experiment. A MultiHarp time correlated single photon counter also provides time tagging photon arrival, enabling users to investigate potential photon bunching, which may imply quantum phenomena occurring within a biological system. Wavelength filtering with Bandpass filters on PMT A allow for spectrally-resolved measurements of UPE.</p>
+<p><img src="image.png" alt="alt text"> <img src="image-1.png" alt="alt text"></p>
+<h2 id="software">Software</h2>
+<h3 id="computer">Computer</h3>
+<p>bioglow.dhcp.lbl.gov running NixOS Linux with Dockerized KasmVNC container with python, ScopeFoundry and VSCode.</p>
+<p>Access via Docker Container KasmVNC at <a href="https://bioglow.dhcp.lbl.gov:3001">https://bioglow.dhcp.lbl.gov:3001</a></p>
+<p>BioGlow software is a <a href="http://www.scopefoundry.org">ScopeFoundry</a> instrument</p>
+<p><img src="bioglow_screenshot.png" alt="BioGlow ScopeFoundry Screenshot"></p>
+<p>Git Repo on BitBucket: <a href="https://bitbucket.org/berkeleylab/foundry_scope/src/bioglow/">https://bitbucket.org/berkeleylab/foundry_scope/src/bioglow/</a></p>
+<p>Cloning software:</p>
+<pre><code>`git clone -b bioglow https://bitbucket.org/berkeleylab/foundry_scope.git`
+</code></pre>
+<h2 id="experiment-types">Experiment Types</h2>
+<h3 id="multiharp-channel-optimizer">MultiHarp Channel Optimizer</h3>
+<p><code>multiharp_channel_optimizer</code></p>
+<p>ScopeFoundry measurement to visualize count rates</p>
+<p><img src="image-2.png" alt="alt text"></p>
+<h3 id="multiharp-t2">MultiHarp T2</h3>
+<h3 id="bioglow-spectral-collection">BioGlow Spectral Collection</h3>
+<p><code>bioglow_spec</code></p>
+<p>Loops through up to 4 sample positions, 11 spectral windows and collects photons on both PMTs for a set amount of time for each sample and spectral &ldquo;block&rdquo;. Output file is an HDF5 file that stores both time-stamped count rates  as well as raw MultiHarp T2 style photon event records for each block. Each block is addtionally saved as its own HDF5 file for backup.</p>
+<p><img src="image-3.png" alt="alt text"></p>
+<h2 id="processing-and-analysis">Processing and Analysis</h2>
+<h3 id="bioglow-spectral-datasets-in-crucible">BioGlow Spectral datasets in Crucible</h3>
+<p><code>bioglow_spec</code> datasets are automatically ingested into <a href="https://crucible.lbl.gov">Crucible</a> and can be viewed on <a href="https://mf-scicat.lbl.gov">SciCat</a> or accessed via Google Drive.</p>
+<p><img src="scicat-screenshot.png" alt="alt text"></p>
+<h3 id="automated-crucible-event-record-parsing">Automated Crucible event record parsing</h3>
+<p>Coming Soon!</p>
+<h3 id="jupyter-notebooks-for-count-rate-analysis">Jupyter Notebooks for Count rate analysis</h3>
+<p>Coming Soon!</p>
+
+  
+
+  </main>
+  <footer>
+    <p>Copyright 2026. All rights reserved.</p>
+<p><a class="text-muted small" href="https://crucible.lbl.gov/api/v1/docs">API Documentation</a></p>
+
+  </footer>
+  <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/assets/js/baguetteBox.min.js"></script>
+  <script src="/assets/js/vanilla-zoom.js"></script>
+  <script src="/assets/js/theme.js"></script>  
+</body>
+</html>

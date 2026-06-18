@@ -1,6 +1,127 @@
-<!doctype html><html lang=en-us dir=ltr data-bs-theme=light><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>SpinBot | Crucible Data Platform</title><link rel=icon type=image/png sizes=256x256 href=/assets/img/logo-256-white.png><link rel=stylesheet href=/assets/bootstrap/css/bootstrap.min.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap"><link rel=stylesheet href=/assets/css/baguetteBox.min.css><link rel=stylesheet href=/assets/css/Banner-Heading-Image-images.css><link rel=stylesheet href=/assets/css/Features-Large-Icons-icons.css><link rel=stylesheet href=/assets/css/vanilla-zoom.min.css><link rel=stylesheet href=/assets/css/main.css><script src=/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js integrity="sha256-I80MfYNyY7nq65buLZzPopadqj+gD6HB/ocBqbhyUaE=" crossorigin=anonymous></script></head><body><header><h1>Crucible Data Platform</h1></header><nav class="navbar navbar-expand-lg fixed-top bg-white clean-navbar navbar-light"><div class=container><a class="navbar-brand text-nowrap logo" href=#><img width=64 height=64 src=/assets/img/logo-256-white.png style=width:64px>Crucible Data Platform</a><button data-bs-toggle=collapse class=navbar-toggler data-bs-target=#navcol-1><span class=visually-hidden>Toggle navigation</span><span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse" id=navcol-1><ul class="navbar-nav ms-auto"><li class=nav-item><a class=nav-link href=/>Home</a></li><li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded=false data-bs-toggle=dropdown href=#>Get Started</a><div class=dropdown-menu><a class=dropdown-item href=https://pypi.org/project/nano-crucible/>Install the Client</a>
-<a class=dropdown-item href=https://crucible-graph-explorer-776258882599.us-central1.run.app/>Explore Your Data</a>
-<a class=dropdown-item href=https://github.com/MolecularFoundryCrucible/nano-crucible>Contribute to the Project</a>
-<a class=dropdown-item href=https://foundry.lbl.gov/user-program/applying-for-access/>Submit a User Proposal</a>
-<a class=dropdown-item href=/demos/>Demos</a></div></li><li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded=false data-bs-toggle=dropdown href=#>Software</a><div class=dropdown-menu><a class=dropdown-item href=https://github.com/MolecularFoundryCrucible/nano-crucible>Crucible</a>
-<a class=dropdown-item href=http://www.scopefoundry.org>ScopeFoundry</a></div></li><li class=nav-item><a class=nav-link href=/about>About</a></li></ul></div></div></nav><main class=page><h1>SpinBot</h1><section class="clean-block clean-blog-list dark"><div class=container><div class=block-heading><h2 class=text-info>Instruments</h2><p>Scientific Instruments at the Molecular Foundry connected to Crucible</p></div><div class=block-content><h1 id=spinbot>SpinBot</h1><p><em>An automated platform for the synthesis and characterization of solution processed thin films</em></p><p><strong>Foundry Scientist:</strong> Carolin Sutter-Fella</p><p><img src=spinbot_overview.png alt="alt text"></p><h2 id=hardware>Hardware</h2><ul><li>Fully automated spin coating platform:<ul><li>Dobot M1</li><li>pipette robot</li><li>spin coaters</li><li>1.5×1.5 mm<sup>2</sup> substrates</li><li>hotplate</li><li>heatable solution shakers</li><li>characterization box</li><li>antisolvent and gas quenching units</li></ul></li><li>Inline optical characterization (UV-vis absorption and photoluminescence)</li><li>Serves the increasing demand for high-throughput experimentations in the field of solution processed semiconductors like lead halide perovskites</li><li>High level of process flexibility and reproducibility of results</li><li>Atmosphere condition</li><li>User friendly GUI to plan and execute experiments</li></ul><h3 id=tec-programmable-heater-system>TEC programmable heater system</h3><p>PLC-controlled 8-way heater/cooler system for setting custom annealing profiles.</p><h2 id=software>Software</h2><h3 id=spinbot-one-control-software-labview>SpinBot One Control software (LabView)</h3><p><img src=spinbot_labview.png alt="SpinBot LabView Screenshot"></p><p>In order to coordinate LabView and ScopeFoundry software, a TCP socket between software is established</p><p><img src=spinbot_labview_python_tcp.png alt="LabView TCP Screenshot"></p><h3 id=characterization-software-scopefoundry>Characterization Software (ScopeFoundry)</h3><h4 id=spec-run>Spec Run</h4><p><code>spec_run</code></p><p>Run the full characterization suite: PL, white-light transmission, and photograph for a single sample.</p><p><img src=spec_run.png alt="Spec_run screenshot"></p><h4 id=tec-heater-batch-program>TEC heater batch program</h4><p><img src=tec_program.png alt="alt text"></p><h4 id=batch-run>Batch Run</h4><p>Peform a batch run of 8 samples coordinated with the SpinBot Labview software. Configuration of this experiment is in JSON files stored in batch directory.</p><p><img src=batch_run_screenshot.png alt="alt text"></p><h2 id=processing-and-analysis>Processing and Analysis</h2><h3 id=specrun-in-crucible>SpecRun in Crucible</h3><p><code>spec_run</code> datasets are automatically ingested into <a href=https://crucible.lbl.gov>Crucible</a> and can be viewed on <a href=https://mf-scicat.lbl.gov>SciCat</a> or accessed via Google Drive.</p><p><img src=image-3.png alt="alt text"></p><h3 id=jupyter-notebooks-for-specrun-analysis>Jupyter Notebooks for SpecRun analysis</h3><p>Coming Soon!</p></main><footer><p>Copyright 2026. All rights reserved.</p><p><a class="text-muted small" href=https://crucible.lbl.gov/api/v1/docs>API Documentation</a></p></footer><script src=/assets/bootstrap/js/bootstrap.min.js></script><script src=/assets/js/baguetteBox.min.js></script><script src=/assets/js/vanilla-zoom.js></script><script src=/assets/js/theme.js></script></body></html>
+<!DOCTYPE html>
+<html 
+lang="en-us" 
+dir="ltr"
+data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title>SpinBot | Crucible Data Platform</title>
+<link rel="icon" type="image/png" sizes="256x256" href="/assets/img/logo-256-white.png">
+
+<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/baguetteBox.min.css">
+<link rel="stylesheet" href="/assets/css/Banner-Heading-Image-images.css">
+<link rel="stylesheet" href="/assets/css/Features-Large-Icons-icons.css">
+<link rel="stylesheet" href="/assets/css/vanilla-zoom.min.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+
+      <script src="/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+  <header>
+    <h1>Crucible Data Platform</h1>
+
+
+  </header>
+  <nav class="navbar navbar-expand-lg fixed-top bg-white clean-navbar navbar-light">
+    <div class="container"><a class="navbar-brand text-nowrap logo" href="#"><img width="64" height="64" src="/assets/img/logo-256-white.png" style="width: 64px;">Crucible Data Platform</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navcol-1">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">Get Started</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="https://pypi.org/project/nano-crucible/">Install the Client</a>
+              <a class="dropdown-item" href="https://crucible.lbl.gov/explore/">Explore Your Data</a>
+              <a class="dropdown-item" href="https://github.com/MolecularFoundryCrucible/nano-crucible">Contribute to the Project</a>
+              <a class="dropdown-item" href="https://foundry.lbl.gov/user-program/applying-for-access/">Submit a User Proposal</a>
+              <a class="dropdown-item" href="/demos/">Demos</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">Software</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="https://github.com/MolecularFoundryCrucible/nano-crucible">Crucible</a>
+              <a class="dropdown-item" href="http://www.scopefoundry.org">ScopeFoundry</a></div>
+            </li>
+            
+            <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>  
+  <main class="page">
+    
+  <h1>SpinBot</h1>
+  <section class="clean-block clean-blog-list dark">
+    <div class="container">
+        <div class="block-heading">
+            <h2 class="text-info">Instruments</h2>
+            <p>Scientific Instruments at the Molecular Foundry connected to Crucible</p>
+        </div>
+        <div class="block-content">
+
+  <h1 id="spinbot">SpinBot</h1>
+<p><em>An automated platform for the synthesis and characterization of solution processed thin films</em></p>
+<p><strong>Foundry Scientist:</strong> Carolin Sutter-Fella</p>
+<p><img src="spinbot_overview.png" alt="alt text"></p>
+<h2 id="hardware">Hardware</h2>
+<ul>
+<li>Fully automated spin coating platform:
+<ul>
+<li>Dobot M1</li>
+<li>pipette robot</li>
+<li>spin coaters</li>
+<li>1.5×1.5 mm<sup>2</sup> substrates</li>
+<li>hotplate</li>
+<li>heatable solution shakers</li>
+<li>characterization box</li>
+<li>antisolvent and gas quenching units</li>
+</ul>
+</li>
+<li>Inline optical characterization (UV-vis absorption and photoluminescence)</li>
+<li>Serves the increasing demand for high-throughput experimentations in the field of solution processed semiconductors like lead halide perovskites</li>
+<li>High level of process flexibility and reproducibility of results</li>
+<li>Atmosphere condition</li>
+<li>User friendly GUI to plan and execute experiments</li>
+</ul>
+<h3 id="tec-programmable-heater-system">TEC programmable heater system</h3>
+<p>PLC-controlled 8-way heater/cooler system for setting custom annealing profiles.</p>
+<h2 id="software">Software</h2>
+<h3 id="spinbot-one-control-software-labview">SpinBot One Control software (LabView)</h3>
+<p><img src="spinbot_labview.png" alt="SpinBot LabView Screenshot"></p>
+<p>In order to coordinate LabView and ScopeFoundry software, a TCP socket between software is established</p>
+<p><img src="spinbot_labview_python_tcp.png" alt="LabView TCP Screenshot"></p>
+<h3 id="characterization-software-scopefoundry">Characterization Software (ScopeFoundry)</h3>
+<h4 id="spec-run">Spec Run</h4>
+<p><code>spec_run</code></p>
+<p>Run the full characterization suite: PL, white-light transmission, and photograph for a single sample.</p>
+<p><img src="spec_run.png" alt="Spec_run screenshot"></p>
+<h4 id="tec-heater-batch-program">TEC heater batch program</h4>
+<p><img src="tec_program.png" alt="alt text"></p>
+<h4 id="batch-run">Batch Run</h4>
+<p>Peform a batch run of 8 samples coordinated with the SpinBot Labview software. Configuration of this experiment is in JSON files stored in batch directory.</p>
+<p><img src="batch_run_screenshot.png" alt="alt text"></p>
+<h2 id="processing-and-analysis">Processing and Analysis</h2>
+<h3 id="specrun-in-crucible">SpecRun in Crucible</h3>
+<p><code>spec_run</code> datasets are automatically ingested into <a href="https://crucible.lbl.gov">Crucible</a> and can be viewed on <a href="https://mf-scicat.lbl.gov">SciCat</a> or accessed via Google Drive.</p>
+<p><img src="image-3.png" alt="alt text"></p>
+<h3 id="jupyter-notebooks-for-specrun-analysis">Jupyter Notebooks for SpecRun analysis</h3>
+<p>Coming Soon!</p>
+
+  
+
+  </main>
+  <footer>
+    <p>Copyright 2026. All rights reserved.</p>
+<p><a class="text-muted small" href="https://crucible.lbl.gov/api/v1/docs">API Documentation</a></p>
+
+  </footer>
+  <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/assets/js/baguetteBox.min.js"></script>
+  <script src="/assets/js/vanilla-zoom.js"></script>
+  <script src="/assets/js/theme.js"></script>  
+</body>
+</html>
