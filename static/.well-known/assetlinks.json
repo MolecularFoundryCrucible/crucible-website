@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "gov.lbl.crucible",
+      "sha256_cert_fingerprints": [
+        "C2:43:AE:F9:B3:3F:C0:04:AA:5A:1A:4B:18:0D:CF:11:D6:A4:E7:4D:55:C8:C0:BE:F5:8C:14:A3:E3:15:F1:FD"
+      ]
+    }
+  }
+]
