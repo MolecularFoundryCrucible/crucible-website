@@ -35,7 +35,11 @@ label = "Molecular Foundry"
 
 [android_app]
 url   = "https://github.com/roncofaber/crucible-lens/releases/latest"
-label = "Android App"
+label = "GitHub"
+
+[play_store]
+url   = "https://play.google.com/apps/testing/gov.lbl.crucible"
+label = "Play Store"
 
 [nano_crucible_docs]
 url   = "https://molecularfoundrycrucible.github.io/nano-crucible/"
