@@ -85,6 +85,14 @@ a {
   text-decoration: none;
 } */
 
+/* Code blocks: light grey panel with dark text. Chroma writes its palette
+   inline on <pre>, so these need !important to win. Token colours come from
+   inline styles on the inner spans and are left alone. */
+.highlight pre {
+  background-color: #f4f6f8 !important;
+  color: #24292f !important;
+}
+
 img {
   max-width: 100%;
   height: auto;

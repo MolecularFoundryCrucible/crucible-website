@@ -12,13 +12,11 @@
 
   <section class="clean-block clean-info dark">
 
-    <!-- Graph Explorer - main attraction -->
+    <!-- Get Started ribbon - main call to action -->
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-md-8 mx-auto text-center">
-                <h2 class="text-uppercase fw-bold">Crucible Graph Explorer</h2>
-                <p class="my-3">Interactive graph-based explorer for browsing and discovering relationships across Crucible datasets.</p>
-                <a class="btn btn-primary btn-lg" role="button" href="{{ .Site.Data.links.graph_explorer.url }}">Launch Graph Explorer</a>
+                <a class="btn btn-primary btn-lg" role="button" href="/getting-started/">Get Started with Crucible</a>
             </div>
         </div>
     </div>
@@ -26,6 +24,18 @@
     <!-- Feature cards -->
     <div class="container py-4">
         <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-xl-4 justify-content-center">
+            <div class="col d-flex">
+                <div class="card h-100 w-100 text-center">
+                    <img class="card-img-top" alt="Crucible Explorer icon" style="width: 70px; height: 70px; object-fit: cover; margin: 12px auto 0; border-radius: 16px; display: block;" src="assets/img/data-explorer.png">
+                    <div class="card-body d-flex flex-column h-100">
+                        <h5 class="card-title fw-bold">Explore Data</h5>
+                        <p class="card-text small">Interactive graph-based explorer for browsing and discovering relationships across Crucible datasets.</p>
+                        <div class="mt-auto">
+                            <a class="btn btn-primary btn-sm" role="button" href="{{ .Site.Data.links.graph_explorer.url }}">Launch Crucible Explorer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col d-flex">
                 <div class="card h-100 w-100 text-center">
                     <img class="card-img-top" alt="nano-crucible logo" style="width: 70px; height: 70px; object-fit: cover; margin: 12px auto 0; border-radius: 16px; display: block;" src="assets/img/logo-542aea6a-c500-45c0-9006-fdf0187a66d3.webp">

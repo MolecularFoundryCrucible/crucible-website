@@ -1,0 +1,63 @@
+{{ define "main" }}
+<section class="gs-hero">
+  <div class="container">
+    <p class="gs-eyebrow">Documentation</p>
+    <h1>{{ .Title }}</h1>
+    <p class="gs-lede">Get started using Crucible. Feel free to make an account, create projects,
+      and upload data. Data files are stored in Google Cloud Storage under the Molecular Foundry
+      account.</p>
+    <p class="gs-lede">Access to data through the Crucible project is limited to platform administrators,
+      members of the Crucible project associated with the dataset, and the instrument service
+      account for the instrument associated with the dataset. A data retention policy for raw data files is under discussion; in the meantime, we
+      recommend keeping your own copies and using Crucible for backup, access, and organization.</p>
+    <p class="gs-lede fw-bold">If you have questions or would like to use Crucible more extensively, please
+      <a href="{{ site.Data.links.data_science_team.url }}">reach out to the team</a> or
+      <a href="{{ site.Data.links.user_proposal.url }}">submit a User Proposal</a> to the Molecular Foundry.</p>
+  </div>
+</section>
+
+<section class="gs-body">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-8 col-xl-9 order-lg-1">
+        <div class="gs-content">
+          {{ .Content }}
+        </div>
+        <div class="gs-help">
+          <h2>Get additional support</h2>
+          <a class="btn btn-primary btn-sm me-1" role="button" href="{{ site.Data.links.user_proposal.url }}">Submit a User Proposal</a>
+          <a class="btn btn-outline-primary btn-sm" role="button" href="{{ site.Data.links.discord.url }}">Join the Discord</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-xl-3 d-none d-lg-block order-lg-2">
+        <div class="gs-toc">
+          <p class="gs-toc-title">On this page</p>
+          {{ .TableOfContents }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Copy button on every code block.
+  document.querySelectorAll('.gs-content .highlight').forEach(function (block) {
+    var code = block.innerText;
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'gs-copy';
+    btn.textContent = 'Copy';
+    btn.addEventListener('click', function () {
+      navigator.clipboard.writeText(code).then(function () {
+        btn.textContent = 'Copied';
+        btn.classList.add('copied');
+        setTimeout(function () {
+          btn.textContent = 'Copy';
+          btn.classList.remove('copied');
+        }, 1600);
+      });
+    });
+    block.appendChild(btn);
+  });
+</script>
+{{ end }}

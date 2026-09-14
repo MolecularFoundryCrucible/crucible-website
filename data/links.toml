@@ -13,6 +13,10 @@ label = "Explore Your Data"
 url   = "https://github.com/MolecularFoundryCrucible/nano-crucible"
 label = "Contribute to the Project"
 
+[data_science_team]
+url   = "https://foundry.lbl.gov/expertise-instrumentation/#data-science-expertise"
+label = "Data Science Expertise"
+
 [user_proposal]
 url   = "https://foundry.lbl.gov/user-program/applying-for-access/"
 label = "Submit a User Proposal"
@@ -40,6 +44,10 @@ label = "GitHub"
 [play_store]
 url   = "https://play.google.com/apps/testing/gov.lbl.crucible"
 label = "Play Store"
+
+[crucible_upload_uis]
+url   = "https://github.com/MolecularFoundryCrucible/crucible-upload-uis"
+label = "Crucible Upload UIs"
 
 [nano_crucible_docs]
 url   = "https://molecularfoundrycrucible.github.io/nano-crucible/"

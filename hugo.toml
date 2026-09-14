@@ -6,5 +6,10 @@ theme = 'crucible'
 [markup.goldmark.renderer]
 unsafe= true
 
+# Light syntax highlighting; the grey background is set in main.css.
+[markup.highlight]
+style = 'github'
+noClasses = true
+
 [markup.goldmark.parser.attribute]
 block = true

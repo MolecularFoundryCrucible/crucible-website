@@ -1,0 +1,5 @@
+{{- /* Callout box: {{< note title="Service accounts" >}} …markdown… {{< /note >}} */ -}}
+<div class="gs-note">
+  <span class="gs-note-title">{{ .Get "title" | default "Note" }}</span>
+  {{ .Inner | markdownify }}
+</div>

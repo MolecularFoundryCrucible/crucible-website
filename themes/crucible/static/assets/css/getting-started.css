@@ -1,0 +1,358 @@
+/* ──────────────────────────────────────────────────────────────
+   Getting Started page. All selectors are scoped to .gs-* so this
+   file cannot leak into the rest of the site.
+   ────────────────────────────────────────────────────────────── */
+
+/* ── Type ─────────────────────────────────────────────────────── */
+.gs-hero,
+.gs-content,
+.gs-toc,
+.gs-help {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* ── Hero ─────────────────────────────────────────────────────── */
+.gs-hero {
+  background: #1C9AAD;
+  color: #fff;
+  padding: 3rem 0 2.5rem;
+}
+.gs-hero h1 {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+.gs-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  opacity: 0.85;
+  margin-bottom: 0.5rem;
+}
+.gs-lede {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 62rem;
+  opacity: 0.95;
+  margin-bottom: 0.7rem;
+}
+.gs-lede:last-child {
+  margin-bottom: 0;
+}
+.gs-hero a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.gs-hero a:hover {
+  color: #dff2f5;
+}
+.gs-hero .btn {
+  font-weight: 600;
+}
+.gs-hero .btn-outline-light:hover {
+  color: #1C6CAD;
+}
+
+/* ── Page body ────────────────────────────────────────────────── */
+.gs-body {
+  padding: 2.25rem 0 3rem;
+  background: #fff;
+}
+.gs-content {
+  counter-reset: gs-step;
+  max-width: 46rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #343a40;
+}
+.gs-content > p:first-child {
+  font-size: 1.08rem;
+  color: #495057;
+}
+
+/* ── Numbered step headings (numbers come from the CSS counter,
+      so the markdown stays clean and the TOC stays readable) ──── */
+.gs-content h2 {
+  counter-increment: gs-step;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #16323f;
+  margin: 2rem 0 0.85rem;
+  padding-top: 1.35rem;
+  border-top: 1px solid #eef1f3;
+  scroll-margin-top: 6.5rem;
+}
+.gs-content h2::before {
+  content: counter(gs-step);
+  flex: 0 0 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #1C9AAD;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.gs-content h2:first-of-type {
+  margin-top: 0.5rem;
+  padding-top: 0;
+  border-top: 0;
+}
+
+/* Sub-headings act as small labels: "Command line", "Python", … */
+.gs-content h3 {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: #1C6CAD;
+  margin: 1.25rem 0 0.5rem;
+  scroll-margin-top: 6.5rem;
+}
+
+.gs-content p,
+.gs-content ol,
+.gs-content ul {
+  margin-bottom: 0.85rem;
+}
+.gs-content ol,
+.gs-content ul {
+  padding-left: 1.25rem;
+}
+.gs-content li {
+  margin-bottom: 0.2rem;
+}
+
+/* ── Code ─────────────────────────────────────────────────────── */
+.gs-content code {
+  background: #f1f4f6;
+  color: #0f4c5c;
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+.gs-content .highlight {
+  position: relative;
+  margin: 0 0 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e3e9ec;
+}
+.gs-content .highlight pre {
+  margin: 0;
+  padding: 0.8rem 1rem;
+  font-size: 0.84rem;
+  line-height: 1.55;
+  overflow-x: auto;
+}
+.gs-content .highlight code {
+  background: none;
+  color: inherit;
+  padding: 0;
+  font-size: inherit;
+}
+
+.gs-copy {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  border: 1px solid #d7dee3;
+  background: #fff;
+  color: #5b6b74;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.gs-content .highlight:hover .gs-copy,
+.gs-copy:focus {
+  opacity: 1;
+}
+.gs-copy:hover {
+  color: #1C9AAD;
+  border-color: #9fd3db;
+}
+.gs-copy.copied {
+  background: #1C9AAD;
+  border-color: #1C9AAD;
+  color: #fff;
+  opacity: 1;
+}
+
+/* ── Expandable options ───────────────────────────────────────── */
+.gs-options {
+  counter-reset: gs-option;
+  margin: 1rem 0 1.25rem;
+}
+.gs-option {
+  border: 1px solid #e3e9ec;
+  border-radius: 10px;
+  background: #fff;
+  margin-bottom: 0.45rem;
+  overflow: hidden;
+}
+.gs-option[open] {
+  border-color: #cfe4e8;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05),
+              0 10px 24px -14px rgba(16, 24, 40, 0.3);
+}
+.gs-option > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.7rem 0.9rem;
+  font-weight: 600;
+  color: #16323f;
+  background: #fbfcfd;
+}
+.gs-option > summary::-webkit-details-marker {
+  display: none;
+}
+.gs-option > summary::before {
+  counter-increment: gs-option;
+  content: "Option " counter(gs-option);
+  flex: 0 0 auto;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #1C9AAD;
+  background: #e7f4f6;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+}
+.gs-option > summary::after {
+  content: "";
+  margin-left: auto;
+  flex: 0 0 auto;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid #8a9aa3;
+  border-bottom: 2px solid #8a9aa3;
+  transform: rotate(45deg);
+  transition: transform 0.15s ease;
+}
+.gs-option[open] > summary::after {
+  transform: rotate(-135deg);
+}
+.gs-option > summary:hover {
+  background: #f3f8f9;
+}
+.gs-option-body {
+  padding: 0.5rem 0.9rem 0.9rem;
+}
+.gs-option-body > :last-child {
+  margin-bottom: 0;
+}
+
+/* ── Callout ──────────────────────────────────────────────────── */
+.gs-note {
+  border-left: 4px solid #1C9AAD;
+  background: #f2fafb;
+  border-radius: 0 8px 8px 0;
+  padding: 0.85rem 1rem;
+  margin: 1.25rem 0;
+}
+.gs-note-title {
+  display: block;
+  font-weight: 700;
+  color: #14707e;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+.gs-note p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Argument table ───────────────────────────────────────────── */
+.gs-content table {
+  font-size: 0.92rem;
+}
+.gs-content thead th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6c757d;
+  font-weight: 700;
+}
+
+/* ── Sticky table of contents ─────────────────────────────────── */
+.gs-toc {
+  position: sticky;
+  top: 6.5rem;
+}
+.gs-toc-title {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #6c757d;
+  margin-bottom: 0.75rem;
+}
+.gs-toc nav > ul {
+  counter-reset: gs-toc;
+  border-left: 2px solid #e9ecef;
+}
+.gs-toc nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.gs-toc nav ul ul {
+  display: none; /* top-level steps only */
+}
+.gs-toc nav > ul > li > a::before {
+  counter-increment: gs-toc;
+  content: counter(gs-toc) ".";
+  color: #adb5bd;
+  margin-right: 0.4rem;
+  font-variant-numeric: tabular-nums;
+}
+.gs-toc nav a {
+  display: block;
+  padding: 0.35rem 0 0.35rem 0.9rem;
+  margin-left: -2px;
+  border-left: 2px solid transparent;
+  color: #495057;
+  text-decoration: none;
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+.gs-toc nav a:hover {
+  color: #1C9AAD;
+  border-left-color: #1C9AAD;
+}
+
+/* ── Closing help card ────────────────────────────────────────── */
+.gs-help {
+  max-width: 48rem;
+  margin-top: 2.25rem;
+  background: #f6f8f9;
+  border: 1px solid #e9eef0;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+.gs-help h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #16323f;
+  margin-bottom: 0.85rem;
+}
+.gs-help p {
+  margin-bottom: 1rem;
+  color: #495057;
+}

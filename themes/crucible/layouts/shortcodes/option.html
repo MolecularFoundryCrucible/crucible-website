@@ -1,0 +1,7 @@
+{{- /* One expandable route: {{< option title="From Python" open="true" >}} …markdown… {{< /option >}} */ -}}
+<details class="gs-option"{{ if eq (.Get "open") "true" }} open{{ end }}>
+  <summary>{{ .Get "title" }}</summary>
+  <div class="gs-option-body">
+    {{ .Inner | markdownify }}
+  </div>
+</details>

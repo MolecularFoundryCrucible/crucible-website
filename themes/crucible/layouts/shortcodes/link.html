@@ -1,0 +1,7 @@
+{{- /* Emit a URL from data/links.toml: {{< link pypi >}} */ -}}
+{{- $key := .Get 0 -}}
+{{- with index site.Data.links $key -}}
+{{- .url -}}
+{{- else -}}
+{{- errorf "link shortcode: no entry %q in data/links.toml (called from %s)" $key $.Page.File.Filename -}}
+{{- end -}}
