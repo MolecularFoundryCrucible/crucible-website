@@ -1,2 +1,10 @@
-<p>Copyright {{ now.Year }}. All rights reserved.</p>
-<p><a class="text-muted small" href="{{ .Site.Data.links.api_docs.url }}">API Documentation</a></p>
+<div class="container py-4 text-center small">
+  <p class="mb-2">
+    <a href="{{ .Site.Data.links.hub.url }}">Crucible Hub</a> &middot;
+    <a href="{{ .Site.Data.links.github.url }}">GitHub</a> &middot;
+    <a href="{{ .Site.Data.links.discord.url }}">Discord</a> &middot;
+    <a href="{{ .Site.Data.links.api_docs.url }}">API Documentation</a> &middot;
+    <a href="mailto:crucible-dev@lbl.gov">crucible-dev@lbl.gov</a>
+  </p>
+  <p class="text-muted mb-0">Crucible is developed at the <a href="{{ .Site.Data.links.foundry.url }}">Molecular Foundry</a>, Lawrence Berkeley National Laboratory, a U.S. Department of Energy Office of Science user facility. Copyright {{ now.Year }}.</p>
+</div>

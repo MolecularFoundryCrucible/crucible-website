@@ -13,3 +13,6 @@ noClasses = true
 
 [markup.goldmark.parser.attribute]
 block = true
+
+[params]
+description = 'Crucible is the unified data-management and computational platform at the Molecular Foundry, Lawrence Berkeley National Laboratory.'

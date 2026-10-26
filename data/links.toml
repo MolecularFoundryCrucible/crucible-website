@@ -52,3 +52,7 @@ label = "Crucible Upload UIs"
 [nano_crucible_docs]
 url   = "https://molecularfoundrycrucible.github.io/nano-crucible/"
 label = "nano-crucible Documentation"
+
+[hub]
+url   = "https://crucible.lbl.gov/hub/"
+label = "Crucible Hub"

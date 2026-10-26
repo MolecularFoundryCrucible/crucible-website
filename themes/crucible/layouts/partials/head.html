@@ -1,6 +1,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+{{- $desc := or .Description site.Params.description }}
+<meta name="description" content="{{ $desc }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ "assets/img/logo-256-542aea6a-c500-45c0-9006-fdf0187a66d3.png" | absURL }}">
 <link rel="icon" type="image/png" sizes="256x256" href="/assets/img/logo-256-white.png">
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}

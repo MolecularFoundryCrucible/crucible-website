@@ -1,27 +1,23 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
   <section class="clean-block clean-blog-list dark">
     <div class="container">
-        <div class="block-heading">
-            <h2 class="text-info">Data Analysis Workflows</h2>
-            <p></p>
-        </div>
-        <div class="block-content">
-
-  {{ .Content }}
-  {{ range .Pages }}
+      <div class="block-heading">
+        <h1 class="h2 text-info">Data Analysis Workflows</h1>
+      </div>
+      <div class="block-content">
+        {{ .Content }}
+        {{ range .Pages }}
           <div class="clean-blog-post">
             <div class="row">
-                <div class="col-lg-5"><img class="rounded img-fluid" src="{{ .Params.header_image }}"></div>
-                <div class="col-lg-7">
-                    <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
-                    <div class="info">
-                      <!-- <span class="text-muted">DATE by <a href="#">AUTHOR</a></span> -->
-                    </div>
-                    <p>    {{ .Summary }}</p>
-                    <!-- <button class="btn btn-outline-primary btn-sm" type="button" href="{{ .RelPermalink }}">Read More</button> -->
-                </div>
+              <div class="col-lg-5"><img class="rounded img-fluid" src="{{ .Params.header_image }}" alt="{{ .LinkTitle }}"></div>
+              <div class="col-lg-7">
+                <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+                <p>{{ .Summary }}</p>
+              </div>
             </div>
           </div>
-  {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
 {{ end }}

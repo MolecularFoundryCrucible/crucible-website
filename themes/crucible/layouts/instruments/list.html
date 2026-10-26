@@ -1,27 +1,29 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
   <section class="clean-block clean-blog-list dark">
     <div class="container">
-        <div class="block-heading">
-            <h2 class="text-info">Instruments</h2>
-            <p>Scientific Instruments at the Molecular Foundry connected to Crucible</p>
-        </div>
-        <div class="block-content">
-
-  {{ .Content }}
-  {{ range .Pages }}
+      <div class="block-heading">
+        {{- if .Parent.IsHome }}
+        <h1 class="h2 text-info">Instruments</h1>
+        <p>Scientific Instruments at the Molecular Foundry connected to Crucible</p>
+        {{- else }}
+        <p class="mb-1"><a href="{{ .Parent.RelPermalink }}">Instruments</a></p>
+        <h1 class="h2 text-info">{{ .Title }}</h1>
+        {{- end }}
+      </div>
+      <div class="block-content instrument-content">
+        {{ .Content }}
+        {{ range .Pages }}
           <div class="clean-blog-post">
             <div class="row">
-                <div class="col-lg-5"><img class="rounded img-fluid" src="{{ .Params.header_image }}"></div>
-                <div class="col-lg-7">
-                    <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
-                    <div class="info"> 
-                      <!-- <span class="text-muted">DATE by <a href="#">AUTHOR</a></span> -->
-                    </div>
-                    <p>    {{ .Summary }}</p>
-                    <!-- <button class="btn btn-outline-primary btn-sm" type="button" href="{{ .RelPermalink }}">Read More</button> -->
-                </div>
+              <div class="col-lg-5"><img class="rounded img-fluid" src="{{ .Params.header_image }}" alt="{{ .LinkTitle }}"></div>
+              <div class="col-lg-7">
+                <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+                <p>{{ .Summary }}</p>
+              </div>
             </div>
           </div>
-  {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
 {{ end }}
