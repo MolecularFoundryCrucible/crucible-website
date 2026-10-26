@@ -7,11 +7,8 @@ data-bs-theme="light">
   {{ partial "head.html" . }}
 </head>
 <body>
-  <header>
-    {{ partial "header.html" . }}
-  </header>
-  <nav class="navbar navbar-expand-lg fixed-top bg-white clean-navbar navbar-light">
-    <div class="container"><a class="navbar-brand text-nowrap logo" href="#"><img width="64" height="64" src="/assets/img/logo-256-white.png" style="width: 64px;">Crucible Data Platform</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+  <nav class="navbar navbar-expand-lg sticky-top bg-white clean-navbar navbar-light">
+    <div class="container"><a class="navbar-brand text-nowrap logo" href="/"><img width="64" height="64" src="/assets/img/logo-256-white.png" alt="Crucible logo">Crucible Data Platform</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navcol-1">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
@@ -20,6 +17,7 @@ data-bs-theme="light">
               <a class="dropdown-item" href="/getting-started/">Getting Started</a>
               <a class="dropdown-item" href="{{ .Site.Data.links.pypi.url }}">Install the Client</a>
               <a class="dropdown-item" href="{{ .Site.Data.links.graph_explorer.url }}">Explore Your Data</a>
+              <a class="dropdown-item" href="{{ .Site.Data.links.hub.url }}">Crucible Hub</a>
               <a class="dropdown-item" href="{{ .Site.Data.links.github.url }}">Contribute to the Project</a>
               <a class="dropdown-item" href="{{ .Site.Data.links.user_proposal.url }}">Submit a User Proposal</a>
               <a class="dropdown-item" href="/demos/">Demos</a>
@@ -43,8 +41,5 @@ data-bs-theme="light">
     {{ partial "footer.html" . }}
   </footer>
   <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="/assets/js/baguetteBox.min.js"></script>
-  <script src="/assets/js/vanilla-zoom.js"></script>
-  <script src="/assets/js/theme.js"></script>  
 </body>
 </html>

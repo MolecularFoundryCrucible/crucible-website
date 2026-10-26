@@ -102,3 +102,40 @@ video {
   max-width: 100%;
   height: auto;
 }
+.card-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin: 20px auto 0;
+  border-radius: 12px;
+  display: block;
+}
+
+.clean-navbar.sticky-top + .page {
+  padding-top: 0;
+}
+
+@media (max-width: 575.98px) {
+  .clean-navbar .logo {
+    font-size: 1.1rem;
+  }
+  .clean-navbar .logo img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.instrument-content h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+.instrument-content h3 {
+  font-size: 1.2rem;
+  margin-top: 1.25rem;
+}
+.instrument-content h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+}

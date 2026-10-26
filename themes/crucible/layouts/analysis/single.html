@@ -1,25 +1,17 @@
 {{ define "main" }}
-  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-  {{ $dateHuman := .Date | time.Format ":date_long" }}
-
+  <section class="clean-block clean-blog-list dark">
     <div class="container">
-
-
-
-      <div class="row">
-        <div class="col-lg-5"><img class="rounded img-fluid" src="{{ .Params.header_image }}"></div>
-        <div class="col-lg-7">
-            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</h3>
-            <div class="info"><span class="text-muted">  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-              by <a href="#">AUTHOR</a></span></div>
-            <p>    {{ .Summary }}</p>
+      <div class="block-heading">
+        <p class="mb-1"><a href="{{ .Parent.RelPermalink }}">Data Analysis Workflows</a></p>
+        <h1 class="h2 text-info">{{ .Title }}</h1>
+      </div>
+      <div class="block-content instrument-content">
+        <div class="row align-items-center">
+          <div class="col-lg-5"><img class="rounded img-fluid" src="{{ .Params.header_image }}" alt="{{ .Title }}"></div>
+          <div class="col-lg-7">{{ .Content }}</div>
         </div>
+        {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+      </div>
     </div>
-    <hr/>
-    {{ .Content }}
-
-    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
-
-  </div>
-
+  </section>
 {{ end }}

@@ -8,6 +8,12 @@ layout = 'getting-started'
 Go to the [Crucible Explorer]({{< link graph_explorer >}}) and sign in to create
 an account.
 
+## Use the web
+
+The [Crucible Hub]({{< link hub >}}) lets you find, inspect, organize, and share
+your samples, datasets, projects, and instruments from the browser. Sign in with
+ORCID using your Crucible account.
+
 ## Install the Python client and CLI
 
 `nano-crucible` provides both the `crucible` command-line tool and the Python

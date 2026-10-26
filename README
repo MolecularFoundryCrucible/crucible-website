@@ -11,7 +11,7 @@ This a Hugo website for Crucible
 To make updates to the website: 
 1) Checkout a new branch
 2) Make the updates (external links can be updated in data/links.toml)
-3) Run hugo build locally
+3) Run `hugo --minify` locally with Hugo 0.156.0 (the version public/ is built with; older versions change unrelated pages)
 4) Push the changes to github 
 5) Create a PR to main
 6) Changes should be reflected on the website within 5 minutes of the PR approval
